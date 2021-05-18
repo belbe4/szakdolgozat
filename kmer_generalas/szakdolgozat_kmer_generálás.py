@@ -17,6 +17,7 @@ drive.mount('/content/drive/')
 os.chdir('/content/drive/MyDrive/Iskolai/Egyetem/Szakdolgozat')
 
 # az adott szekvecniából kmereket visszaadó függvény, k a kmer hossza, a shift a lépéshossz a kmerek között
+# a generátorként való megvalósítás ötlete a "https://www.biostars.org/p/415732/" oldalról eredeztethető
 def create_kmers(seq, k, shift):
   for x in range(0, len(seq)-k, shift):
     yield seq[x:x+k]
